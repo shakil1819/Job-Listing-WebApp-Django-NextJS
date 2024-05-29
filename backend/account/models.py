@@ -6,7 +6,7 @@ from django.db.models.signals import post_save
 # Create your models here.
 class UserProfile(models.Model):
     user = models.OneToOneField(User, related_name='userprofile', on_delete=models.CASCADE)
-    resume = models.FileField(null=True)
+    # resume = models.FileField(null=True)
 
 
 @receiver(post_save, sender=User)
