@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-shakil1819-joblistingwe-uae2mr4vfh0.ws-us114.gitpod.io',
+    'localhost',
 ]
 
 
@@ -47,7 +48,7 @@ INSTALLED_APPS = [
     'django_filters',
 
     'job.apps.JobConfig',
-    'account.apps.AccountConfig',
+    'account.apps.AccountConfig'
 ]
 
 MIDDLEWARE = [
@@ -111,9 +112,10 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'utils.custom_exception_handler.custom_exception_handler',
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+    ),
 }
 
 SIMPLE_JWT = {
