@@ -7,7 +7,7 @@ node_modules
 *.pyc
 # testing
 coverage
-
+backend/db.sqlite3
 # next.js
 .next/
 out/
@@ -34,3 +34,4 @@ yarn-error.log*
 
 
 env
+backend/db.sqlite3
