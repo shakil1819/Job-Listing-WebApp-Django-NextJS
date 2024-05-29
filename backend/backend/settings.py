@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-xlpm@t_==yuvsjj1!d(hs14ltxa7w3i4eno%#og2k10f^el4+k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '8000-shakil1819-joblistingwe-uae2mr4vfh0.ws-us114.gitpod.io',
+]
 
 
 # Application definition
@@ -37,6 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'corsheaders',
+    # 'storages'
+    # 'django.contrib.gis',
+    'django_filters',
+
+    'job.apps.JobConfig'
 ]
 
 MIDDLEWARE = [
@@ -121,3 +130,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.gitpod.io',  # Wildcard domain
+    'https://*.dev/',
+    'https://localhost',
+    'https://127.0.0.1',
+]
