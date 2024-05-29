@@ -29,8 +29,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '8000-shakil1819-joblistingwe-uae2mr4vfh0.ws-us114.gitpod.io',
     'localhost',
+    '127.0.0.1',
 ]
-
 
 # Application definition
 
@@ -151,4 +151,6 @@ CSRF_TRUSTED_ORIGINS = [
     'https://*.dev/',
     'https://localhost',
     'https://127.0.0.1',
+    'https://localhost:3000',
+    'https://127.0.0.1:3000',
 ]
