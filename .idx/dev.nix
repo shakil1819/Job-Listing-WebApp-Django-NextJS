@@ -14,6 +14,8 @@
     pkgs.python310Full
     pkgs.pipenv
     pkgs.docker
+    pkgs.sqlite
+    pkgs.sqlitebrowser
   ];
   services.docker.enable=true;
 

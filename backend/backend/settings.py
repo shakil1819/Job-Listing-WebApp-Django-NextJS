@@ -10,7 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import dj_database_url
+from datetime import timedelta
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +28,10 @@ SECRET_KEY = 'django-insecure-m6u@v!7!a+ew!yq6%)!m6q!h3dx=*g(yff-v45)s)(^7_21g!+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '8000-idx-job-listing-webapp-django-nextjs-1717406356193.cluster-a3grjzek65cxex762e4mwrzl46.cloudworkstations.dev',
+    '127.0.0.1',
+]
 
 
 # Application definition
@@ -39,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'job',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -70,7 +77,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'backend.wsgi.application'
-
+ASGI_APPLICATION = 'backend.asgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -101,7 +108,27 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'utils.custom_exception_handler.custom_exception_handler',
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
 
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dtxxylneb',
+    'API_KEY': '891129496377173',
+    'API_SECRET': 'e7VNSq0VlGphzmYAXS-zK-kICjU'
+}
+# CLOUDINARY_URL=cloudinary://891129496377173:e7VNSq0VlGphzmYAXS-zK-kICjU@dtxxylneb
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.RawMediaCloudinaryStorage'
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=15),
+    'AUTH_HEADER_TYPES': ('Bearer',),
+    'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
+}
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 

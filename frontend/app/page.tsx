@@ -1,25 +1,30 @@
-// app/page.tsx
 "use client";
 
 import React, { useEffect, useState } from "react";
+import io from "socket.io-client";
 
 const Page = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/jobs/")
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => console.error("Error fetching data:", error));
+    const socket = io("http://localhost:8000/ws/jobs/");
+
+    socket.on("job_message", (message) => {
+      setData((prevData) => [...prevData, message]);
+    });
+
+    return () => {
+      socket.disconnect();
+    };
   }, []);
 
   return (
     <div>
       <h1>Job Listings</h1>
-      {data ? (
+      {data.length ? (
         <ul>
-          {(data as any[]).map((job) => (
-            <li key={job.id}>{job.title}</li>
+          {data.map((job, index) => (
+            <li key={index}>{job.title}</li>
           ))}
         </ul>
       ) : (
