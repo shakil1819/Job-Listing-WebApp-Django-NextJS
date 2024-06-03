@@ -1,0 +1,20 @@
+.
+├── README.md
+├── app
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── data.ts
+├── next-env.d.ts
+├── next.config.mjs
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── public
+│   ├── images
+├── tailwind.config.ts
+├── tree.txt
+└── tsconfig.json
+
+1766 directories, 16771 files
