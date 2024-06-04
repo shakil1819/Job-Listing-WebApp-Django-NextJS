@@ -17,7 +17,7 @@
     pkgs.sqlite
     pkgs.sqlitebrowser
     pkgs.neofetch
-    pkgs.stacer
+    pkgs.tree
   ];
   services.docker.enable=true;
 
