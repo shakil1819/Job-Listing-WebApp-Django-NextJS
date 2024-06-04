@@ -16,6 +16,8 @@
     pkgs.docker
     pkgs.sqlite
     pkgs.sqlitebrowser
+    pkgs.neofetch
+    pkgs.stacer
   ];
   services.docker.enable=true;
 
