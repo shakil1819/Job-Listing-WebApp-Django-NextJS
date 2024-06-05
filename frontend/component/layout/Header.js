@@ -21,7 +21,7 @@ const Header = () => {
           <span style={{
             cursor:"pointer"
           }}>
-            Job-Portal
+            Internlancer
           </span>
         </Link>
         <div className="btnsWrapper">

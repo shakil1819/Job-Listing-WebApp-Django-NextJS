@@ -91,7 +91,7 @@ const TopicStats = () => {
 
                   <div className="alert alert-danger mt-4">
                     <b>Note:</b> These stats are collected from the jobs that
-                    are posted only on Job-Portal. Do not compare these stats with
+                    are posted only on Internlancer. Do not compare these stats with
                     other sites.
                   </div>
                 </>
