@@ -2,9 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    // API_URL: "http://localhost:8000",
-    API_URL: "https://jobbee-django.herokuapp.com",
-  },
-};
+    API: "http://localhost:8000",
+    RESUME_URL:"https://res.cloudinary.com/dtxxylneb/raw/upload"
+  }
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

@@ -1,11 +1,11 @@
 import Layout from "../../component/layout/Layout";
-import EditProfile from "../../component/user/EditProfile";
+import NewJob from "../../component/NewJob";
 import { isAuthenticatedUser } from "../../utils/isAuthenticated";
 
-export default function UpdateProfilePage({ token }) {
+export default function NewJobPage({ token }) {
   return (
-    <Layout>
-      <EditProfile token={token} />
+    <Layout title="Post a new Job">
+      <NewJob token={token} />
     </Layout>
   );
 }
