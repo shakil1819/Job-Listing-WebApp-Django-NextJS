@@ -1,14 +1,10 @@
-import React from 'react';
-import Layout from '../component/layout/Layout';
-import Search from '../component/Search';
+import Layout from "../components/layout/Layout";
+import Search from "../components/layout/Search";
 
-
-const SearchPage = () => {
-    return (
-        <Layout>
-           <Search/>
-        </Layout>
-    );
+export default function Index({ data }) {
+  return (
+    <Layout title="Search your jobs">
+      <Search />
+    </Layout>
+  );
 }
-
-export default SearchPage

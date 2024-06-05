@@ -1,13 +1,13 @@
+import Layout from "../../../components/layout/Layout";
+import MyJobs from "../../../components/job/MyJobs";
+
+import { isAuthenticatedUser } from "../../../utils/isAuthenticated";
 import axios from "axios";
-import Layout from "../../components/layout/Layout";
-import JobsApplied from "../../components/job/JobsApplied";
 
-import { isAuthenticatedUser } from "../../utils/isAuthenticated";
-
-export default function JobsAppliedPage({ jobs }) {
+export default function MyJobsPage({ jobs, access_token }) {
   return (
-    <Layout title="Jobs Applied">
-      <JobsApplied jobs={jobs} />
+    <Layout title="My Jobs">
+      <MyJobs jobs={jobs} access_token={access_token} />
     </Layout>
   );
 }
@@ -26,7 +26,7 @@ export async function getServerSideProps({ req }) {
     };
   }
 
-  const res = await axios.get(`${process.env.API_URL}/api/me/jobs/applied/`, {
+  const res = await axios.get(`${process.env.API_URL}/api/me/jobs/`, {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
@@ -37,6 +37,7 @@ export async function getServerSideProps({ req }) {
   return {
     props: {
       jobs,
+      access_token,
     },
   };
 }

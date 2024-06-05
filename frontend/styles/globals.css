@@ -36,7 +36,6 @@ body {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
-
 .navContainer {
   width: 85%;
   display: flex;
@@ -53,17 +52,14 @@ body {
   align-items: center;
   cursor: pointer;
 }
-
 .logoImgWrapper {
   width: 27px;
   display: flex;
   margin-right: 10px;
 }
-
 .logo1 {
   color: var(--primary);
 }
-
 .logo2 {
   color: #618dd4;
 }
@@ -71,9 +67,8 @@ body {
 .btnsWrapper {
   display: flex;
 }
-
 .postAJobButton {
-  background: rgb(21, 251, 254);
+  background: green;
   padding: 5px 15px;
   border: none;
   outline: none;
@@ -84,7 +79,6 @@ body {
   width: 120px;
   transition: all 0.5s;
 }
-
 .postAJobButton span {
   cursor: pointer;
   display: inline-block;
@@ -112,9 +106,8 @@ body {
   opacity: 1;
   right: 0;
 }
-
 .loginButtonHeader {
-  background:purple;
+  background: var(--primary);
   padding: 5px 20px;
   border: none;
   outline: none;
@@ -125,7 +118,6 @@ body {
   width: 90px;
   transition: all 0.5s;
 }
-
 .loginButtonHeader span {
   cursor: pointer;
   display: inline-block;
@@ -168,7 +160,6 @@ body {
   width: 80px;
   height: 80px;
 }
-
 .lds-ellipsis div {
   position: absolute;
   top: 33px;
@@ -178,52 +169,42 @@ body {
   background: #2557a7;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
-
 .lds-ellipsis div:nth-child(1) {
   left: 8px;
   animation: lds-ellipsis1 0.6s infinite;
 }
-
 .lds-ellipsis div:nth-child(2) {
   left: 8px;
   animation: lds-ellipsis2 0.6s infinite;
 }
-
 .lds-ellipsis div:nth-child(3) {
   left: 32px;
   animation: lds-ellipsis2 0.6s infinite;
 }
-
 .lds-ellipsis div:nth-child(4) {
   left: 56px;
   animation: lds-ellipsis3 0.6s infinite;
 }
-
 @keyframes lds-ellipsis1 {
   0% {
     transform: scale(0);
   }
-
   100% {
     transform: scale(1);
   }
 }
-
 @keyframes lds-ellipsis3 {
   0% {
     transform: scale(1);
   }
-
   100% {
     transform: scale(0);
   }
 }
-
 @keyframes lds-ellipsis2 {
   0% {
     transform: translate(0, 0);
   }
-
   100% {
     transform: translate(24px, 0);
   }
@@ -236,9 +217,8 @@ body {
   width: 16px;
   height: 16px;
 }
-
 .lds-dual-ring:after {
-  content: "";
+  content: " ";
   display: block;
   width: 24px;
   height: 24px;
@@ -247,12 +227,10 @@ body {
   border-color: #fff transparent #fff transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
-
 @keyframes lds-dual-ring {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
@@ -430,7 +408,6 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
 .modalWrapper {
   width: 75%;
   height: 70vh;
@@ -443,11 +420,9 @@ footer {
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
     rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
-
 .h70 {
   height: 60%;
 }
-
 .right {
   border-left: 1px solid rgb(196, 196, 196);
   display: flex;
@@ -455,7 +430,6 @@ footer {
   padding: 0 20px;
   width: 100%;
 }
-
 .rightContentWrapper,
 .leftContentWrapper {
   height: 100%;
@@ -464,14 +438,12 @@ footer {
   flex-direction: column;
   justify-content: center;
 }
-
 .headerWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
 }
-
 .headerWrapper h2 {
   display: flex;
   justify-content: center;
@@ -480,12 +452,10 @@ footer {
   font-weight: bold;
   margin-left: 10px;
 }
-
 .LoginLogoWrapper,
 .RegisterLogoWrapper {
   width: 34px;
 }
-
 .left {
   display: flex;
   align-items: center;
@@ -496,7 +466,6 @@ footer {
   display: flex;
   flex-direction: column;
 }
-
 .form input {
   width: 100%;
   padding-left: 10px;
@@ -505,7 +474,6 @@ footer {
   font-size: 13px;
   background: rgb(241, 241, 241);
 }
-
 .inputBox {
   display: flex;
   align-items: center;
@@ -515,17 +483,14 @@ footer {
   background: rgb(241, 241, 241);
   margin-bottom: 15px;
 }
-
 .inputBox i {
   font-size: 12px;
 }
-
 .inputWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .loginButtonWrapper,
 .registerButtonWrapper,
 .searchButtonWrapper,
@@ -535,7 +500,6 @@ footer {
   justify-content: center;
   margin: 10px 0;
 }
-
 .loginButton,
 .registerButton,
 .searchButton,
@@ -551,11 +515,13 @@ footer {
   text-align: center;
   border: none;
   background-size: 300% 100%;
-  background-image: linear-gradient(to right,
-      #25aae1,
-      #4481eb,
-      #04befe,
-      #3f86ed);
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #04befe,
+    #3f86ed
+  );
   box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 
   border-radius: 50px;
@@ -584,7 +550,6 @@ footer {
 .uploadButton:focus {
   outline: none;
 }
-
 .signup {
   display: flex;
   justify-content: center;
@@ -594,7 +559,6 @@ footer {
   cursor: pointer;
   color: rgb(36, 36, 36);
 }
-
 .signup a {
   text-decoration: none;
   color: var(--primary);
@@ -606,25 +570,20 @@ footer {
     width: 70%;
   }
 }
-
 @media only screen and (max-width: 720px) {
   .left {
     display: none;
   }
-
   .modalWrapper {
     width: 95%;
   }
-
   .right {
     border-left: none;
   }
-
   .inputBox {
     width: 93.5%;
     margin-left: 0;
   }
-
   .signup {
     margin-top: 10px;
   }
@@ -638,7 +597,6 @@ footer {
   align-items: center;
   padding: 30px 0;
 }
-
 .newJobcontainer .formWrapper {
   background: #fff;
   padding: 20px;
@@ -660,7 +618,6 @@ footer {
 .newJobcontainer .boxWrapper:not(:first-child) {
   margin: 36px 0;
 }
-
 .newJobcontainer .boxWrapper h4 {
   margin-bottom: 15px;
 }
@@ -671,7 +628,6 @@ footer {
   justify-content: flex-start;
   align-items: center;
 }
-
 .newJobcontainer select {
   background-color: white;
   border: thin solid var(--primary);
