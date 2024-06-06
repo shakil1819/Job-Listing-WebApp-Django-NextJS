@@ -5,7 +5,7 @@ const nextConfig = {
   env: {
     // API: "http://localhost:8000",
     // RESUME_URL:"https://res.cloudinary.com/dtxxylneb/raw/upload"
-    API: process.env.API || 'http://localhost:8000',
+    API: process.env.API || "http://localhost:8000",
     RESUME_URL: process.env.RESUME_URL || 'https://res.cloudinary.com/dtxxylneb/raw/upload'
   }
 }
