@@ -1,14 +1,17 @@
 # Dockerfile for Next.js frontend
-FROM node:20
+FROM node:16-alpine
 
 # Set working directory
 WORKDIR /frontend
 
-# Install dependencies
+# Copy package.json and package-lock.json first to leverage Docker cache
 COPY frontend/package.json frontend/package-lock.json ./
-RUN npm install
 
-# Copy project files
+# Install dependencies
+RUN npm install
+RUN npm run build
+
+# Copy all frontend files
 COPY frontend /frontend/
 
 # Expose port 3000
