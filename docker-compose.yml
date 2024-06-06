@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    volumes:
+      - ./backend:/backend
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    volumes:
+      - ./frontend:/frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - API=http://backend:8000
+      - RESUME_URL=https://res.cloudinary.com/dtxxylneb/raw/upload
+    depends_on:
+      - backend
