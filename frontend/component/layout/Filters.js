@@ -238,7 +238,7 @@ const Filters = () => {
         />
         
         <label className="form-check-label" htmlFor="check11">
-          ₹1 - ₹50000
+          BDT1 - BDT50000
         </label>
 
       </div>
@@ -256,7 +256,7 @@ const Filters = () => {
         />
         
         <label className="form-check-label" htmlFor="check12">
-          ₹50000 - ₹100,000
+          BDT50000 - BDT100,000
         </label>
 
       </div>
@@ -274,7 +274,7 @@ const Filters = () => {
         />
         
         <label className="form-check-label" htmlFor="check13">
-          ₹100,000 - ₹200,000
+          BDT100,000 - BDT200,000
         </label>
 
       </div>
@@ -292,7 +292,7 @@ const Filters = () => {
         />
         
         <label className="form-check-label" htmlFor="defaultCheck2">
-         ₹300,000 - ₹500,000
+         BDT300,000 - BDT500,000
         </label>
 
       </div>
@@ -310,7 +310,7 @@ const Filters = () => {
         />
 
         <label className="form-check-label" htmlFor="check14">
-          ₹500,000 - ₹1,000,000
+          BDT500,000 - BDT1,000,000
         </label>
       </div>
       <hr />

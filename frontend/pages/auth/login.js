@@ -73,7 +73,7 @@ const Login = () => {
                 </button>
               </div>
               <p style={{ textDecoration: "none" }} className="signup">
-                New to Internlancer? <Link href="/auth/register">Create an account</Link>
+                New to TheRecruitmentAlternative? <Link href="/auth/register">Create an account</Link>
               </p>
             </form>
           </div>

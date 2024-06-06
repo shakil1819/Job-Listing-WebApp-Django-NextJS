@@ -95,7 +95,7 @@ const JobDetails = ({ job, candidates, token }) => {
                     <tr>
                       <td>Expected Salary</td>
                       <td>:</td>
-                      <td>₹{job.salary}</td>
+                      <td>BDT{job.salary}</td>
                     </tr>
 
                     <tr>
@@ -144,7 +144,7 @@ const JobDetails = ({ job, candidates, token }) => {
                   You can no longer apply to this job. This job is expired. Last
                   date to apply for this job was:{" "}
                   <b>{job.lastDate.substring(0, 10)}</b>
-                  <br /> Checkout others job on Internlancer.
+                  <br /> Checkout others job on TheRecruitmentAlternative.
                 </div>
               </div>
             )}
