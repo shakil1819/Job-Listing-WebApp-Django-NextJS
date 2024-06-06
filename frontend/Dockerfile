@@ -9,13 +9,16 @@ COPY frontend/package.json frontend/package-lock.json ./
 
 # Install dependencies
 RUN npm install
-RUN npm run build
+# RUN npm run build
 
 # Copy all frontend files
 COPY frontend /frontend/
 
 # Expose port 3000
-EXPOSE 3000
+ENV PORT=3000
+
+EXPOSE $PORT
+# EXPOSE 3000
 
 # Run the development server
 CMD ["npm", "run", "dev"]
