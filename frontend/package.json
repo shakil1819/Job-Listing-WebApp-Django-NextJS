@@ -13,7 +13,7 @@
     "cookie": "^0.4.2",
     "mapbox-gl": "^2.7.0",
     "moment": "^2.29.1",
-    "next": "12.1.0",
+    "next": "14.2.25",
     "react": "17.0.2",
     "react-data-table-component": "^7.4.7",
     "react-dom": "17.0.2",
